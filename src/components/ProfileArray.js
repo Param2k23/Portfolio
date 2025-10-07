@@ -56,15 +56,15 @@ const parseProfile = (mdContent) => {
 
 const ProfileArray = () => {
   const [profile, setProfile] = useState({
-    siteName: "",
-    headerName: "",
-    headerRole: "",
-    headerDesc: "",
-    about: "",
-    contact: "",
-    linkedin: "",
-    github: "",
-    email: "",
+    siteName: "Param Kamleshkumar Patel",
+    headerName: "Param Patel",
+    headerRole: "MS CS Student @ Stony Brook University",
+    headerDesc: "Passionate about building impactful software solutions.",
+    about: "I am a MS CS student at Stony Brook University with a keen interest in software development and AI. I love building innovative applications that make a difference.",
+    contact: "Feel free to reach out to me via email or LinkedIn.",
+    linkedin: "https://www.linkedin.com/in/param-patel19/",
+    github: "https://github.com/Param2k23",
+    email: "paramkamleshku.patel@stonybrook.edu",
     logo: "",
   });
 

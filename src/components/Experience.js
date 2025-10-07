@@ -20,7 +20,7 @@ import {
   Center,
 } from "@chakra-ui/react";
 import { ChevronRightIcon } from "@chakra-ui/icons";
-import { Fade } from "react-reveal";
+import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import ExperienceArray from "./ExperienceArray";
 import TagsArray from "./TagsArray";
@@ -30,11 +30,14 @@ export default function Experience({ color }) {
   const options = TagsArray("ExperienceTags");
   const [selected, setSelected] = useState("");
 
+  // Keep selected empty by default to show all experiences
   useEffect(() => {
-    if (options.length > 0) {
+    if (options.length === 1 && selected === "") {
+      // if there's only one tag available, default to it for convenience
       setSelected(options[0].value);
     }
-  }, [options]);
+    // include selected to satisfy exhaustive-deps; setter is guarded so no loop occurs
+  }, [options, selected]);
   
   const handleSelected = (value) => {
     setSelected(value);
@@ -72,10 +75,19 @@ export default function Experience({ color }) {
           </Center>
           <Stack px={4} spacing={4}>
             {experience
-              .filter((exp) => exp.tags.includes(selected))
+              .filter((exp) => {
+                if (!selected || selected === "") return true;
+                return exp.tags && exp.tags.includes(selected);
+              })
               .map((exp) => (
-                <Fade bottom>
-                  <Card key={exp.company} size="sm">
+                <motion.div
+                  key={exp.company}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.2 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <Card size="sm">
                     <CardHeader>
                       <Flex justifyContent="space-between">
                         <HStack>
@@ -119,7 +131,7 @@ export default function Experience({ color }) {
                       </HStack>
                     </CardFooter>
                   </Card>
-                </Fade>
+                </motion.div>
               ))}
           </Stack>
         </Stack>

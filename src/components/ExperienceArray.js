@@ -17,18 +17,25 @@ const parseExperience = (mdContent) => {
       const duration = positionLine[1].trim();
       const imageLine = lines[++i];
       const image = imageLine.match(/!\[(.*)\]\((.*)\)/)[2];
-      const tags = lines[++i].split(":")[1].trim();
+  // Parse tags into an array (comma-separated)
+  const tagsLine = lines[++i] || "";
+  const tags = (tagsLine.split(":")[1] || "").split(",").map((s) => s.trim()).filter(Boolean);
       const badges = [];
       const listItems = [];
 
       while (lines[++i] && !lines[i].startsWith("- Badges:")) {}
+      // Collect badges (lines under '- Badges:')
       while (lines[++i] && lines[i].startsWith("  - ")) {
         const badgeLine = lines[i].substr(4).split("[");
         const badgeName = badgeLine[0].trim();
-        const badgeColor = badgeLine[1].split("]")[0].trim();
+        const badgeColor = (badgeLine[1] || "]").split("]")[0].trim();
         badges.push({ name: badgeName, colorScheme: badgeColor });
       }
 
+      // Skip a possible '- List Items:' header and collect list items
+      if (lines[i] && lines[i].startsWith("- List Items")) {
+        // advance to first list item
+      }
       while (lines[++i] && lines[i].startsWith("  - ")) {
         listItems.push(lines[i].substr(4));
       }

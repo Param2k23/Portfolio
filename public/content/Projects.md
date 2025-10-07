@@ -1,26 +1,39 @@
-## Project A
-Description
+## AI Resume Generator (Param2k23 / AI Resume Generator)
+Developed an AI-powered resume generator with a Spring Boot backend and a React frontend.
 - ![600x200](https://via.placeholder.com/600x200)
-- Tags: Category 1
+- Tags: Generative AI, Spring, React
 - Badges:
-  - Badge [blue]
+  - Spring Boot [green]
+  - React [blue]
 - Buttons:
-  - Link [https://example.com]
+  - Live [#]
 
-## Project B
-Description
+## Pixabay (Pixabay.app)
+High-performance image search and retrieval clone built with the MERN stack.
 - ![600x200](https://via.placeholder.com/600x200)
-- Tags: Category 2
+- Tags: MERN, Performance
 - Badges:
-  - Badge [blue]
+  - MongoDB [green]
+  - React [blue]
 - Buttons:
-  - Link [https://example.com]
+  - Live [#]
 
-## Project C
-Description
+## Streamy (Streamy.app)
+Single Page Application for media streaming with React, optimized for performance and CDN deployment.
 - ![600x200](https://via.placeholder.com/600x200)
-- Tags: Category 3
+- Tags: React, Performance
 - Badges:
-  - Badge [blue]
+  - React [blue]
+  - Performance [purple]
 - Buttons:
-  - Link [https://example.com]
+  - Live [#]
+
+## Job Portal (Param2k23 / Job Portal)
+Robust backend job marketplace implemented in Advanced Java (J2EE) with bidding and multi-factor evaluation.
+- ![600x200](https://via.placeholder.com/600x200)
+- Tags: Java, Backend
+- Badges:
+  - J2EE [orange]
+  - Backend [teal]
+- Buttons:
+  - Repo [#]
