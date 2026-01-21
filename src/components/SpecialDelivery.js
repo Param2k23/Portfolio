@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 // ============= CONFIGURATION CONSTANTS =============
 const PASSWORD = '08062020';
 const HER_NAME = 'Mauli ❤️';
-const VIDEO_SOURCE = '/mauli/video.mp4'; // Your custom video
+// const VIDEO_SOURCE = '/mauli/video.mp4'; // Your custom video
 // Background gallery images (24 images for scrolling background)
 const BG_IMAGES = Array.from({ length: 24 }, (_, i) => `/mauli/images/bg-${i + 1}.jpg`);
 // Memory card images
@@ -560,6 +560,7 @@ const SpecialDelivery = () => {
                                                         boxShadow: '0 0 60px rgba(139,92,246,0.5)'
                                                     }}>
                                                         <iframe
+                                                            title="Description of the video/content"
                                                             loading="lazy"
                                                             style={{
                                                                 position: 'absolute',
