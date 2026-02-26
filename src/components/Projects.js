@@ -11,6 +11,7 @@ import {
   Image,
   Heading,
   Badge,
+  SimpleGrid,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import ProjectsArray from "./ProjectsArray";
@@ -20,7 +21,7 @@ export default function Projects({ color }) {
     
   return (
     <>
-      <Container maxW={"3xl"} id="projects">
+      <Container maxW={"6xl"} id="projects">
         <Stack
           as={Box}
           textAlign={"center"}
@@ -30,13 +31,13 @@ export default function Projects({ color }) {
           <Stack align="center" direction="row" p={4}>
             <HStack mx={4}>
               <Text color={`${color}.400`} fontWeight={800}>
-                03
+                04
               </Text>
               <Text fontWeight={800}>Projects</Text>
             </HStack>
             <Divider orientation="horizontal" />
           </Stack>
-          <Stack px={4} spacing={4}>
+          <SimpleGrid columns={{ base: 1, md: 2 }} spacing={6} px={4}>
             {projects.map((project) => (
               <motion.div
                 key={project.name}
@@ -46,30 +47,35 @@ export default function Projects({ color }) {
                 transition={{ duration: 0.5 }}
               >
                 <Card
-                  
-                  direction={{
-                    base: "column",
-                  }}
                   overflow="hidden"
+                  bg="whiteAlpha.800"
+                  border="1px solid"
+                  borderColor="blackAlpha.100"
+                  h="100%"
                 >
-                  <Image objectFit="cover" src={project.image} />
+                  <Image objectFit="cover" src={project.image} h="200px" />
 
                   <Stack>
                     <CardBody align="left">
-                      <Heading size="md">{project.name}</Heading>
-
-                      <Text py={2}>{project.description}</Text>
-
-                      <HStack py={2}>
+                      <HStack justifyContent="space-between" mb={2}>
+                        <Heading size="md">{project.name}</Heading>
+                        <Badge colorScheme={color} variant="subtle">
+                          Featured
+                        </Badge>
+                      </HStack>
+                      <Text py={2} color="gray.600">
+                        {project.description}
+                      </Text>
+                      <HStack py={2} flexWrap="wrap">
                         {project.buttons.map((button) => (
                           <a key={button.text} href={button.href}>
-                            <Button color={`${color}.400`}>
+                            <Button color={`${color}.400`} variant="outline">
                               {button.text}
                             </Button>
                           </a>
                         ))}
                       </HStack>
-                      <HStack pt={4} spacing={2}>
+                      <HStack pt={4} spacing={2} flexWrap="wrap">
                         {project.badges.map((badge) => (
                           <Badge
                             key={badge.text}
@@ -84,7 +90,7 @@ export default function Projects({ color }) {
                 </Card>
               </motion.div>
             ))}
-          </Stack>
+          </SimpleGrid>
           {/* Other Projects section removed */}
         </Stack>
       </Container>

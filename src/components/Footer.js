@@ -9,7 +9,7 @@ import {
 export default function Footer() {
   return (
     <Box
-      bg={useColorModeValue("gray.50", "gray.900")}
+      bg={useColorModeValue("whiteAlpha.800", "gray.900")}
       color={useColorModeValue("gray.700", "gray.200")}
     >
       <Container
@@ -18,7 +18,7 @@ export default function Footer() {
         py={4}
         align="center"
       >
-        <Text>© 2025 Param Patel. All rights reserved</Text>
+        <Text>© 2026 Param Patel. Crafted with curiosity.</Text>
       </Container>
     </Box>
   );

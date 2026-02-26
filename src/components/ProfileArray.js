@@ -28,6 +28,11 @@ const parseProfile = (mdContent) => {
           profile.headerRole = lines[++i].substr(2).trim();
           profile.headerDesc = lines[++i].substr(2).trim();
           break;
+        case "Site Name":
+        case "SiteName":
+        case "Name":
+          profile.siteName = lines[++i].substr(2).trim();
+          break;
         case "About":
           profile.about = lines[++i].trim();
           break;
@@ -56,16 +61,16 @@ const parseProfile = (mdContent) => {
 
 const ProfileArray = () => {
   const [profile, setProfile] = useState({
-    siteName: "Param Kamleshkumar Patel",
+    siteName: "Param Patel",
     headerName: "Param Patel",
-    headerRole: "MS CS Student @ Stony Brook University",
-    headerDesc: "Passionate about building impactful software solutions.",
-    about: "I am a MS CS student at Stony Brook University with a keen interest in software development and AI. I love building innovative applications that make a difference.",
-    contact: "Feel free to reach out to me via email or LinkedIn.",
+    headerRole: "Generative AI Engineer + Full-Stack Builder",
+    headerDesc: "I design multi-agent AI systems and performant web apps, from RAG chatbots to self-healing automation platforms.",
+    about: "Motivated CS graduate student with hands-on experience building full-stack and generative AI systems. I focus on scalable backends, RAG pipelines, and automation workflows that deliver measurable impact.",
+    contact: "Let's connect about AI systems, product engineering, or research collaborations.",
     linkedin: "https://www.linkedin.com/in/param-patel19/",
     github: "https://github.com/Param2k23",
     email: "paramkamleshku.patel@stonybrook.edu",
-    logo: "",
+    logo: "PP",
   });
 
   useEffect(() => {

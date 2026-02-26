@@ -21,7 +21,7 @@ import {
 } from "@chakra-ui/react";
 import { ChevronRightIcon } from "@chakra-ui/icons";
 import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import ExperienceArray from "./ExperienceArray";
 import TagsArray from "./TagsArray";
 
@@ -30,22 +30,13 @@ export default function Experience({ color }) {
   const options = TagsArray("ExperienceTags");
   const [selected, setSelected] = useState("");
 
-  // Keep selected empty by default to show all experiences
-  useEffect(() => {
-    if (options.length === 1 && selected === "") {
-      // if there's only one tag available, default to it for convenience
-      setSelected(options[0].value);
-    }
-    // include selected to satisfy exhaustive-deps; setter is guarded so no loop occurs
-  }, [options, selected]);
-  
   const handleSelected = (value) => {
     setSelected(value);
   };
 
   return (
     <>
-      <Container maxW={"3xl"} id="experience">
+      <Container maxW={"6xl"} id="experience">
         <Stack
           as={Box}
           textAlign={"center"}
@@ -55,7 +46,7 @@ export default function Experience({ color }) {
           <Stack align="center" direction="row" px={4}>
             <HStack mx={4}>
               <Text color={`${color}.400`} fontWeight={800}>
-                02
+                03
               </Text>
               <Text fontWeight={800}>Experience</Text>
             </HStack>
@@ -63,8 +54,16 @@ export default function Experience({ color }) {
           </Stack>
           <Center px={4}>
             <ButtonGroup variant="outline">
+              <Button
+                key="All"
+                colorScheme={selected === "" ? `${color}` : "gray"}
+                onClick={() => handleSelected("")}
+              >
+                All
+              </Button>
               {options.map((option) => (
                 <Button
+                  key={option.value}
                   colorScheme={selected === option.value ? `${color}` : "gray"}
                   onClick={() => handleSelected(option.value)}
                 >
@@ -87,7 +86,12 @@ export default function Experience({ color }) {
                   viewport={{ once: true, amount: 0.2 }}
                   transition={{ duration: 0.5 }}
                 >
-                  <Card size="sm">
+                  <Card
+                    size="sm"
+                    bg="whiteAlpha.800"
+                    border="1px solid"
+                    borderColor="blackAlpha.100"
+                  >
                     <CardHeader>
                       <Flex justifyContent="space-between">
                         <HStack>

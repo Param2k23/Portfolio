@@ -1,28 +1,19 @@
-## Param Kamleshkumar Patel
-
-- Phone: +1 934-246-3396
-- Email: paramkamleshku.patel@stonybrook.edu
-- GitHub: parampatel
-- Handle: Param2k23
-- Location: Stony Brook, NY
+## Site Name
+- Param Patel
 
 ## Header
-- MS Candidate, Computer Science — Stony Brook University (Aug 2024 – May 2026, expected)
+- Param Patel
+- Generative AI Engineer + Full-Stack Builder
+- I design multi-agent AI systems and performant web apps, from RAG chatbots to self-healing automation platforms.
 
 ## About
-Motivated Computer Science master's student with hands-on experience building full-stack and generative AI systems. Skilled in designing scalable backends, deploying RAG-enabled chatbots, and automating incident remediation workflows with multi-agent architectures. Strong foundation in algorithms, systems design, and modern web frameworks.
-
-## Education
-- Stony Brook University — MS in Computer Science (Aug 2024 – May 2026, expected) — Stony Brook, NY, USA
-- Indus University — B.Tech in Computer Engineering (Aug 2020 – May 2024) — Ahmedabad, GJ, India
-
-## Technical Skills
-- Languages (certified): Python, Java, C, C++, JavaScript, SQL / PL/SQL
-- Frameworks & Libraries: React, Next.js, Node.js, Express, Spring Boot, FastAPI, Quart, Data Science libraries
-- Concepts: OOP, REST APIs, MVC, Generative AI, LLMs, LangChain, Web scraping, Automation, MCP/A2A
-- Databases / Vector DBs: MongoDB, PostgreSQL, Neo4j, Cassandra, Pinecone, Qdrant, Chroma, FAISS
-- Tools / Cloud: Git, Docker, AWS (EC2, S3, Lambda), PowerBI, Tableau, Eclipse, Splunk, Dynatrace, Postman, Android Studio
+Motivated CS graduate student with hands-on experience building full-stack and generative AI systems. I focus on scalable backends, RAG pipelines, and automation workflows that deliver measurable impact.
 
 ## Contact
+Let's connect about AI systems, product engineering, or research collaborations.
+- LinkedIn: https://www.linkedin.com/in/param-patel19/
+- GitHub: https://github.com/Param2k23
 - Email: paramkamleshku.patel@stonybrook.edu
-- Location: Stony Brook, NY
+
+## Logo
+- PP

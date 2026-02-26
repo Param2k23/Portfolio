@@ -7,15 +7,15 @@ import {
   DrawerContent,
   useColorModeValue,
   Stack,
-  useColorMode,
   IconButton,
   useMediaQuery,
   useDisclosure,
   HStack,
   Link,
+  Box,
 } from "@chakra-ui/react";
-import { MoonIcon, SunIcon, HamburgerIcon } from "@chakra-ui/icons";
-import { useState } from "react";
+import { HamburgerIcon } from "@chakra-ui/icons";
+import { useEffect, useState } from "react";
 import ProfileArray from "./ProfileArray";
 const TbIcons = require("react-icons/tb");
 
@@ -33,7 +33,6 @@ export default function Nav({ color }) {
   "teal": "#319795", 
   "yellow": "#D69E2E"};
   const [scroll, setScroll] = useState(false);
-  const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   const [isLargerThanMD] = useMediaQuery("(min-width: 48em)");
@@ -57,12 +56,15 @@ export default function Nav({ color }) {
     const contactSection = document.querySelector("#contact");
     contactSection.scrollIntoView({ behavior: "smooth" });
   };
-  const changeScroll = () =>
-    document.body.scrollTop > 80 || document.documentElement.scrollTop > 80
-      ? setScroll(true)
-      : setScroll(false);
+  useEffect(() => {
+    const changeScroll = () =>
+      document.body.scrollTop > 80 || document.documentElement.scrollTop > 80
+        ? setScroll(true)
+        : setScroll(false);
 
-  window.addEventListener("scroll", changeScroll);
+    window.addEventListener("scroll", changeScroll);
+    return () => window.removeEventListener("scroll", changeScroll);
+  }, []);
 
   const TbLetterComponents = [];
 
@@ -75,10 +77,11 @@ export default function Nav({ color }) {
   return (
     <>
       <Flex
-        bg={useColorModeValue("gray.100", "gray.900")}
-        px={4}
+        bg={scroll ? "rgba(248, 244, 238, 0.9)" : "transparent"}
+        backdropFilter={scroll ? "blur(12px)" : "none"}
+        px={{ base: 4, md: 8 }}
         h={16}
-        boxShadow={scroll ? "base" : "none"}
+        boxShadow={scroll ? "0 10px 30px rgba(0,0,0,0.25)" : "none"}
         zIndex="sticky"
         position="fixed"
         as="header"
@@ -87,10 +90,17 @@ export default function Nav({ color }) {
         w="100%"
       >
         <Link onClick={scrollToHero}>
-          <HStack>
+          <HStack spacing={1}>
             {TbLetterComponents.map((Component, index) => (
               <Component key={index} color={colors[color]} />
             ))}
+            <Box
+              ml={2}
+              fontWeight={700}
+              color={useColorModeValue("gray.900", "white")}
+            >
+              {profile.siteName}
+            </Box>
           </HStack>
         </Link>
 
@@ -110,14 +120,19 @@ export default function Nav({ color }) {
                 <Button variant="ghost" onClick={scrollToContact}>
                   Contact
                 </Button>
+                <Button
+                  colorScheme={color}
+                  bg={`${color}.400`}
+                  _hover={{ bg: `${color}.500` }}
+                  rounded="full"
+                  onClick={() => window.open("/content/Param_Patel_SE.pdf", "_blank")}
+                >
+                  Resume
+                </Button>
               </>
             ) : (
               <></>
             )}
-            <Button onClick={toggleColorMode}>
-              {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
-            </Button>
-
             {isLargerThanMD ? (
               <></>
             ) : (
@@ -142,6 +157,15 @@ export default function Nav({ color }) {
                       </Button>
                       <Button variant="ghost" onClick={scrollToContact}>
                         Contact
+                      </Button>
+                      <Button
+                        colorScheme={color}
+                        bg={`${color}.400`}
+                        _hover={{ bg: `${color}.500` }}
+                        rounded="full"
+                        onClick={() => window.open("/content/Param_Patel_SE.pdf", "_blank")}
+                      >
+                        Resume
                       </Button>
                     </DrawerBody>
                   </DrawerContent>

@@ -1,2 +1,5 @@
-Generative AI Intern
-AI Intern
+Generative AI
+Automation
+RAG
+Full-Stack
+DevOps

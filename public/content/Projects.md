@@ -1,39 +1,43 @@
-## AI Resume Generator (Param2k23 / AI Resume Generator)
-Developed an AI-powered resume generator with a Spring Boot backend and a React frontend.
-- ![600x200](https://via.placeholder.com/600x200)
-- Tags: Generative AI, Spring, React
+## HeartBridgeAI (Param2k23 / HackPrinceton)
+Multi-agent emotional support platform that analyzes parent-child conversations and recommends care activities.
+- ![HeartBridgeAI](https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=1200&q=80)
+- Tags: Multi-Agent, Generative AI
 - Badges:
-  - Spring Boot [green]
+  - LLMs [purple]
   - React [blue]
+  - Postgres [green]
 - Buttons:
-  - Live [#]
+  - Repo [https://github.com/Param2k23/HackPrinceton]
 
-## Pixabay (Pixabay.app)
-High-performance image search and retrieval clone built with the MERN stack.
-- ![600x200](https://via.placeholder.com/600x200)
-- Tags: MERN, Performance
+## Multi-Model Debate for Efficient Retrieval
+Biomedical QA pipeline combining RAG retrieval, lightweight LLMs, and debate-driven explanation refinement.
+- ![Multi-Model Debate](https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=1200&q=80)
+- Tags: RAG, NLP
 - Badges:
-  - MongoDB [green]
-  - React [blue]
+  - RAG [teal]
+  - RoBERTa [orange]
+  - Vector DB [gray]
 - Buttons:
-  - Live [#]
+  - Case Study [#]
 
-## Streamy (Streamy.app)
-Single Page Application for media streaming with React, optimized for performance and CDN deployment.
-- ![600x200](https://via.placeholder.com/600x200)
-- Tags: React, Performance
+## Humor Understanding in LLMs
+Fine-tuned RoBERTa and GPT-2 on 120k samples to classify humor and benchmark reasoning quality.
+- ![Humor Understanding](https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80)
+- Tags: NLP, Evaluation
 - Badges:
-  - React [blue]
-  - Performance [purple]
+  - RoBERTa [orange]
+  - GPT-2 [red]
+  - Data Pipelines [purple]
 - Buttons:
-  - Live [#]
+  - Report [#]
 
-## Job Portal (Param2k23 / Job Portal)
-Robust backend job marketplace implemented in Advanced Java (J2EE) with bidding and multi-factor evaluation.
-- ![600x200](https://via.placeholder.com/600x200)
-- Tags: Java, Backend
+## Social Media Election Analysis
+Processed 40M+ tweets with Spark to map sentiment spikes and detect bot-driven anomalies.
+- ![Election Analysis](https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1200&q=80)
+- Tags: Big Data, Analytics
 - Badges:
-  - J2EE [orange]
-  - Backend [teal]
+  - Spark [yellow]
+  - NLP [teal]
+  - DBSCAN [blue]
 - Buttons:
-  - Repo [#]
+  - Summary [#]
