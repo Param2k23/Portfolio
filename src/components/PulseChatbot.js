@@ -10,7 +10,6 @@ import {
   Badge,
   Spinner,
   Divider,
-  useColorModeValue,
 } from "@chakra-ui/react";
 import { CloseIcon, ChatIcon } from "@chakra-ui/icons";
 import { motion } from "framer-motion";
