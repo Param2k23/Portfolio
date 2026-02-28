@@ -19,9 +19,9 @@ export default function ThemeToggle() {
         as="button"
         onClick={toggleColorMode}
         position="fixed"
-        top={{ base: '20px', md: '24px' }}
+        top={{ base: '80px', md: '24px' }}
         right={{ base: '20px', md: '24px' }}
-        zIndex={1000}
+        zIndex={999}
         bg={isDark ? 'rgba(255, 122, 74, 0.1)' : 'rgba(47, 135, 255, 0.1)'}
         border="2px solid"
         borderColor={isDark ? 'ff7a4a' : 'brand.400'}
