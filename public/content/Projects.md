@@ -1,6 +1,6 @@
 ## HeartBridgeAI (Param2k23 / HackPrinceton)
 Multi-agent emotional support platform that analyzes parent-child conversations and recommends care activities.
-- ![HeartBridgeAI](https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=1200&q=80)
+- ![HeartBridgeAI](https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=80)
 - Tags: Multi-Agent, Generative AI
 - Badges:
   - LLMs [purple]
@@ -11,7 +11,7 @@ Multi-agent emotional support platform that analyzes parent-child conversations 
 
 ## Multi-Model Debate for Efficient Retrieval
 Biomedical QA pipeline combining RAG retrieval, lightweight LLMs, and debate-driven explanation refinement.
-- ![Multi-Model Debate](https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=1200&q=80)
+- ![Multi-Model Debate](https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80)
 - Tags: RAG, NLP
 - Badges:
   - RAG [teal]
@@ -22,7 +22,7 @@ Biomedical QA pipeline combining RAG retrieval, lightweight LLMs, and debate-dri
 
 ## Humor Understanding in LLMs
 Fine-tuned RoBERTa and GPT-2 on 120k samples to classify humor and benchmark reasoning quality.
-- ![Humor Understanding](https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80)
+- ![Humor Understanding](https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80)
 - Tags: NLP, Evaluation
 - Badges:
   - RoBERTa [orange]
@@ -33,7 +33,7 @@ Fine-tuned RoBERTa and GPT-2 on 120k samples to classify humor and benchmark rea
 
 ## Social Media Election Analysis
 Processed 40M+ tweets with Spark to map sentiment spikes and detect bot-driven anomalies.
-- ![Election Analysis](https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1200&q=80)
+- ![Election Analysis](https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=80)
 - Tags: Big Data, Analytics
 - Badges:
   - Spark [yellow]

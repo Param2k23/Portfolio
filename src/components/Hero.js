@@ -62,7 +62,7 @@ export default function Header({ color }) {
                 textTransform="uppercase"
                 letterSpacing="0.2em"
               >
-                AI Systems + Product Engineering
+                Generative AI Engineer
               </Badge>
               <Heading
                 fontWeight={700}
@@ -112,33 +112,15 @@ export default function Header({ color }) {
                 >
                   See projects
                 </Button>
-                <Button
-                  variant={"link"}
-                  colorScheme={"blue"}
-                  size={"sm"}
-                  onClick={scrollToContact}
-                >
-                  Contact me
-                </Button>
-                <Box display={{ base: "none", md: "block" }}>
-                  <Icon
-                    as={Arrow}
-                    color={useColorModeValue("gray.700", "gray.300")}
-                    w={71}
-                    position={"absolute"}
-                    right={-71}
-                    top={"6px"}
-                  />
-                  <Text
-                    fontSize={"lg"}
-                    fontFamily={"Caveat"}
-                    position={"absolute"}
-                    right={"-85px"}
-                    top={"-20px"}
-                    transform={"rotate(10deg)"}
+                <Box display={{ base: "none", md: "block" }} position="relative" ml={4}>
+                  <Button
+                    variant={"link"}
+                    colorScheme={"blue"}
+                    size={"sm"}
+                    onClick={scrollToContact}
                   >
-                    Start here
-                  </Text>
+                    Contact me
+                  </Button>
                 </Box>
               </Stack>
             </Stack>

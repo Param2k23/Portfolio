@@ -30,8 +30,9 @@ export default function Contact({ color }) {
           textAlign={"center"}
           spacing={{ base: 8, md: 14 }}
           pb={{ base: 20, md: 36 }}
+          align="center"
         >
-          <Stack align="center" direction="row" p={4}>
+          <Stack align="center" direction="row" p={4} justify="center">
             <HStack mx={4}>
               <Text color={`${color}.400`} fontWeight={800}>
                 05
@@ -50,6 +51,7 @@ export default function Contact({ color }) {
             borderColor="blackAlpha.100"
             borderRadius="24px"
             p={{ base: 6, md: 10 }}
+            align="center"
           >
             <Heading fontSize={"3xl"}>Let's build something bold.</Heading>
             <Text color={"gray.600"} fontSize={"xl"} px={4}>
