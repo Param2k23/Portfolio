@@ -11,6 +11,17 @@
   --text-muted: rgba(27, 27, 31, 0.7);
 }
 
+[data-theme="dark"] {
+  --bg-ink: #0f0f1e;
+  --bg-ember: #1a1a2e;
+  --accent: #ff7a4a;
+  --accent-2: #2f87ff;
+  --surface: rgba(255, 255, 255, 0.08);
+  --surface-strong: rgba(255, 255, 255, 0.12);
+  --text-primary: #e0e0e0;
+  --text-muted: rgba(224, 224, 224, 0.6);
+}
+
 * {
   box-sizing: border-box;
 }
@@ -18,12 +29,21 @@
 body {
   margin: 0;
   font-family: 'Space Grotesk', system-ui, sans-serif;
-  background: radial-gradient(circle at 20% 20%, rgba(47, 135, 255, 0.12), transparent 45%),
-    radial-gradient(circle at 80% 0%, rgba(255, 122, 74, 0.2), transparent 40%),
+  background: radial-gradient(circle at 20% 20%, rgba(47, 135, 255, 0.08), transparent 45%),
+    radial-gradient(circle at 80% 0%, rgba(255, 122, 74, 0.15), transparent 40%),
     linear-gradient(140deg, var(--bg-ink), var(--bg-ember));
   color: var(--text-primary);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: radial-gradient(circle at 20% 20%, rgba(47, 135, 255, 0.05), transparent 45%),
+      radial-gradient(circle at 80% 0%, rgba(255, 122, 74, 0.08), transparent 40%),
+      linear-gradient(140deg, #0f0f1e, #1a1a2e);
+  }
 }
 
 a {

@@ -34,10 +34,50 @@ const theme = extendTheme({
     body: "'Space Grotesk', system-ui, sans-serif",
   },
   styles: {
-    global: {
+    global: (props) => ({
       body: {
-        bg: "transparent",
-        color: "gray.900",
+        bg: props.colorMode === 'dark' ? '#0f0f1e' : 'linear-gradient(140deg, #f8f4ee, #efe9e1)',
+        color: props.colorMode === 'dark' ? '#e0e0e0' : '#1b1b1f',
+        transition: 'background-color 0.3s ease, color 0.3s ease',
+      },
+      a: {
+        color: props.colorMode === 'dark' ? '#ff7a4a' : 'inherit',
+        _hover: {
+          textDecoration: 'underline',
+        },
+      },
+    }),
+  },
+  semanticTokens: {
+    colors: {
+      'bg-primary': {
+        default: '#f8f4ee',
+        _dark: '#0f0f1e',
+      },
+      'bg-secondary': {
+        default: '#efe9e1',
+        _dark: '#171a23',
+      },
+      'text-primary': {
+        default: '#1b1b1f',
+        _dark: '#e0e0e0',
+      },
+      'text-muted': {
+        default: 'rgba(27, 27, 31, 0.7)',
+        _dark: 'rgba(224, 224, 224, 0.6)',
+      },
+      'border-color': {
+        default: 'rgba(0, 0, 0, 0.1)',
+        _dark: 'rgba(255, 255, 255, 0.1)',
+      },
+    },
+  },
+  components: {
+    Button: {
+      defaultProps: {
+        _active: {
+          transform: 'scale(0.98)',
+        },
       },
     },
   },
