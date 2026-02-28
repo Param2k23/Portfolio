@@ -79,8 +79,13 @@ const theme = extendTheme({
           transform: 'scale(0.98)',
         },
       },
-    },
-  },
+    },    Box: {
+      baseStyle: (props) => ({
+        _dark: {
+          bg: props.colorMode === 'dark' ? undefined : undefined,
+        },
+      }),
+    },  },
 });
 
 export default theme;

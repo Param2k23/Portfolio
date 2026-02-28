@@ -128,7 +128,9 @@ export default function Header({ color }) {
             <Stack
               flex={1}
               spacing={4}
-              bg="whiteAlpha.800"
+              bg={useColorModeValue("whiteAlpha.800", "rgba(30, 30, 50, 0.8)")}
+              border="1px solid"
+              borderColor={useColorModeValue("blackAlpha.100", "whiteAlpha.100")}
               borderRadius="24px"
               border="1px solid"
               borderColor="blackAlpha.100"

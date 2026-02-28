@@ -8,6 +8,7 @@ import {
   Heading,
   Center,
   Button,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import ProfileArray from "./ProfileArray";
 
@@ -46,9 +47,9 @@ export default function Contact({ color }) {
             as={Container}
             maxW={"3xl"}
             textAlign={"center"}
-            bg="whiteAlpha.800"
+            bg={useColorModeValue("whiteAlpha.800", "rgba(30, 30, 50, 0.8)")}
             border="1px solid"
-            borderColor="blackAlpha.100"
+            borderColor={useColorModeValue("blackAlpha.100", "whiteAlpha.100")}
             borderRadius="24px"
             p={{ base: 6, md: 10 }}
             align="center"

@@ -9,7 +9,8 @@ import {
 export default function Footer() {
   return (
     <Box
-      bg={useColorModeValue("whiteAlpha.800", "gray.900")}
+      bg={useColorModeValue("whiteAlpha.800", "rgba(30, 30, 50, 0.8)")}
+      borderColor={useColorModeValue("blackAlpha.100", "whiteAlpha.100")}
       color={useColorModeValue("gray.700", "gray.200")}
     >
       <Container

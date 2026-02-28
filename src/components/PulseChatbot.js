@@ -10,6 +10,7 @@ import {
   Badge,
   Spinner,
   Divider,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import { CloseIcon, ChatIcon } from "@chakra-ui/icons";
 import { motion } from "framer-motion";
@@ -184,7 +185,7 @@ export default function PulseChatbot({ color }) {
                 maxWidth="85%"
               >
                 <Box
-                  bg={msg.sender === "user" ? `${color}.400` : "gray.100"}
+                  bg={msg.sender === "user" ? `${color}.400` : useColorModeValue("gray.100", "rgba(30, 30, 50, 0.8)")}
                   color={msg.sender === "user" ? "white" : "gray.900"}
                   borderRadius="16px"
                   px={4}

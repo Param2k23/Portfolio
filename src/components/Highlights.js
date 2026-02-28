@@ -8,6 +8,7 @@ import {
   Text,
   Badge,
   Heading,
+  useColorModeValue,
 } from "@chakra-ui/react";
 
 export default function Highlights({ color }) {
@@ -45,10 +46,10 @@ export default function Highlights({ color }) {
           {cards.map((card) => (
             <Box
               key={card.title}
-              bg="whiteAlpha.800"
+              bg={useColorModeValue("whiteAlpha.800", "rgba(30, 30, 50, 0.8)")}
               borderRadius="20px"
               border="1px solid"
-              borderColor="blackAlpha.100"
+              borderColor={useColorModeValue("blackAlpha.100", "whiteAlpha.100")}
               p={6}
               textAlign="left"
             >

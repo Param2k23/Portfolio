@@ -88,9 +88,9 @@ export default function Experience({ color }) {
                 >
                   <Card
                     size="sm"
-                    bg="whiteAlpha.800"
+                    bg={useColorModeValue("whiteAlpha.800", "rgba(30, 30, 50, 0.8)")}
                     border="1px solid"
-                    borderColor="blackAlpha.100"
+                    borderColor={useColorModeValue("blackAlpha.100", "whiteAlpha.100")}
                   >
                     <CardHeader>
                       <Flex justifyContent="space-between">

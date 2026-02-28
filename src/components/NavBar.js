@@ -82,11 +82,11 @@ export default function Nav({ color }) {
   return (
     <>
       <Flex
-        bg={scroll ? "rgba(248, 244, 238, 0.9)" : "transparent"}
+        bg={scroll ? useColorModeValue("rgba(248, 244, 238, 0.95)", "rgba(15, 15, 30, 0.95)") : "transparent"}
         backdropFilter={scroll ? "blur(12px)" : "none"}
         px={{ base: 4, md: 8 }}
         h={16}
-        boxShadow={scroll ? "0 10px 30px rgba(0,0,0,0.25)" : "none"}
+        boxShadow={scroll ? useColorModeValue("0 10px 30px rgba(0,0,0,0.15)", "0 10px 30px rgba(0,0,0,0.5)") : "none"}
         zIndex="sticky"
         position="fixed"
         as="header"
