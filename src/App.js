@@ -10,7 +10,6 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import PulseChatbot from './components/PulseChatbot';
-import ThemeToggle from './components/ThemeToggle';
 
 function App() {
   const color = "brand";
@@ -20,7 +19,6 @@ function App() {
       <div className="site-shell">
         <div className="hero-glow" />
         <div className="grain-overlay" />
-        <ThemeToggle />
         <Routes>
           <Route
             path="/"

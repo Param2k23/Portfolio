@@ -6,6 +6,7 @@ import {
   DrawerOverlay,
   DrawerContent,
   useColorModeValue,
+  useColorMode,
   Stack,
   IconButton,
   useMediaQuery,
@@ -13,14 +14,18 @@ import {
   HStack,
   Link,
   Box,
+  Tooltip,
 } from "@chakra-ui/react";
-import { HamburgerIcon } from "@chakra-ui/icons";
+import { HamburgerIcon, SunIcon, MoonIcon } from "@chakra-ui/icons";
 import { useEffect, useState } from "react";
 import ProfileArray from "./ProfileArray";
+import { motion } from "framer-motion";
 const TbIcons = require("react-icons/tb");
 
 export default function Nav({ color }) {
   const profile = ProfileArray();
+  const { colorMode, toggleColorMode } = useColorMode();
+  const isDark = colorMode === 'dark';
   const colors = {
   "blue": "#3182CE", 
   "cyan": "#00B5D8", 
@@ -120,6 +125,17 @@ export default function Nav({ color }) {
                 <Button variant="ghost" onClick={scrollToContact}>
                   Contact
                 </Button>
+                <Tooltip label={isDark ? 'Light Mode' : 'Dark Mode'} placement="bottom" hasArrow>
+                  <IconButton
+                    icon={isDark ? <SunIcon /> : <MoonIcon />}
+                    onClick={toggleColorMode}
+                    variant="ghost"
+                    aria-label="Toggle theme"
+                    _hover={{
+                      bg: isDark ? 'rgba(255, 122, 74, 0.2)' : 'rgba(47, 135, 255, 0.2)',
+                    }}
+                  />
+                </Tooltip>
                 <Button
                   colorScheme={color}
                   bg={`${color}.400`}
@@ -137,6 +153,17 @@ export default function Nav({ color }) {
               <></>
             ) : (
               <>
+                <Tooltip label={isDark ? 'Light Mode' : 'Dark Mode'} placement="bottom" hasArrow>
+                  <IconButton
+                    icon={isDark ? <SunIcon /> : <MoonIcon />}
+                    onClick={toggleColorMode}
+                    variant="ghost"
+                    aria-label="Toggle theme"
+                    _hover={{
+                      bg: isDark ? 'rgba(255, 122, 74, 0.2)' : 'rgba(47, 135, 255, 0.2)',
+                    }}
+                  />
+                </Tooltip>
                 <Button
                   as={IconButton}
                   icon={<HamburgerIcon />}
