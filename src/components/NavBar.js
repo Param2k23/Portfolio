@@ -26,6 +26,9 @@ export default function Nav({ color }) {
   const profile = ProfileArray();
   const { colorMode, toggleColorMode } = useColorMode();
   const isDark = colorMode === 'dark';
+  
+  const navbarBg = useColorModeValue("rgba(248, 244, 238, 0.95)", "rgba(15, 15, 30, 0.95)");
+  const navbarShadow = useColorModeValue("0 10px 30px rgba(0,0,0,0.15)", "0 10px 30px rgba(0,0,0,0.5)");
   const colors = {
   "blue": "#3182CE", 
   "cyan": "#00B5D8", 
@@ -82,11 +85,11 @@ export default function Nav({ color }) {
   return (
     <>
       <Flex
-        bg={scroll ? useColorModeValue("rgba(248, 244, 238, 0.95)", "rgba(15, 15, 30, 0.95)") : "transparent"}
+        bg={scroll ? navbarBg : "transparent"}
         backdropFilter={scroll ? "blur(12px)" : "none"}
         px={{ base: 4, md: 8 }}
         h={16}
-        boxShadow={scroll ? useColorModeValue("0 10px 30px rgba(0,0,0,0.15)", "0 10px 30px rgba(0,0,0,0.5)") : "none"}
+        boxShadow={scroll ? navbarShadow : "none"}
         zIndex="sticky"
         position="fixed"
         as="header"

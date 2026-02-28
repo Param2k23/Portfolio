@@ -12,6 +12,9 @@ import {
 } from "@chakra-ui/react";
 
 export default function Highlights({ color }) {
+  const highlightBg = useColorModeValue("whiteAlpha.800", "rgba(30, 30, 50, 0.8)");
+  const highlightBorder = useColorModeValue("blackAlpha.100", "whiteAlpha.100");
+  
   const cards = [
     {
       title: "Multi-agent automation",
@@ -46,10 +49,10 @@ export default function Highlights({ color }) {
           {cards.map((card) => (
             <Box
               key={card.title}
-              bg={useColorModeValue("whiteAlpha.800", "rgba(30, 30, 50, 0.8)")}
+              bg={highlightBg}
               borderRadius="20px"
               border="1px solid"
-              borderColor={useColorModeValue("blackAlpha.100", "whiteAlpha.100")}
+              borderColor={highlightBorder}
               p={6}
               textAlign="left"
             >

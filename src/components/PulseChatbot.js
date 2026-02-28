@@ -30,6 +30,10 @@ export default function PulseChatbot({ color }) {
   const [inputValue, setInputValue] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef(null);
+  
+  const botMessageBg = useColorModeValue("gray.100", "rgba(30, 30, 50, 0.8)");
+  const chatboxBg = useColorModeValue("white", "#0f0f1e");
+  const textColor = useColorModeValue("gray.600", "gray.300");
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -131,7 +135,7 @@ export default function PulseChatbot({ color }) {
           width={{ base: "90vw", sm: "400px" }}
           maxHeight="600px"
           zIndex={9998}
-          bg="white"
+          bg={chatboxBg}
           borderRadius="24px"
           boxShadow="0 20px 50px rgba(0,0,0,0.15)"
           display="flex"
@@ -185,7 +189,7 @@ export default function PulseChatbot({ color }) {
                 maxWidth="85%"
               >
                 <Box
-                  bg={msg.sender === "user" ? `${color}.400` : useColorModeValue("gray.100", "rgba(30, 30, 50, 0.8)")}
+                  bg={msg.sender === "user" ? `${color}.400` : botMessageBg}
                   color={msg.sender === "user" ? "white" : "gray.900"}
                   borderRadius="16px"
                   px={4}
@@ -201,7 +205,7 @@ export default function PulseChatbot({ color }) {
             {isLoading && (
               <HStack spacing={2}>
                 <Spinner size="sm" color={`${color}.400`} />
-                <Text fontSize="sm" color="gray.600">
+                <Text fontSize="sm" color={textColor}>
                   Pulse is thinking...
                 </Text>
               </HStack>

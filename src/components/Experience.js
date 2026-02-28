@@ -18,6 +18,7 @@ import {
   Button,
   ButtonGroup,
   Center,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import { ChevronRightIcon } from "@chakra-ui/icons";
 import { motion } from "framer-motion";
@@ -28,6 +29,9 @@ import TagsArray from "./TagsArray";
 export default function Experience({ color }) {
   const experience = ExperienceArray();
   const options = TagsArray("ExperienceTags");
+  
+  const cardBg = useColorModeValue("whiteAlpha.800", "rgba(30, 30, 50, 0.8)");
+  const cardBorder = useColorModeValue("blackAlpha.100", "whiteAlpha.100");
   const [selected, setSelected] = useState("");
 
   const handleSelected = (value) => {
@@ -88,9 +92,9 @@ export default function Experience({ color }) {
                 >
                   <Card
                     size="sm"
-                    bg={useColorModeValue("whiteAlpha.800", "rgba(30, 30, 50, 0.8)")}
+                    bg={cardBg}
                     border="1px solid"
-                    borderColor={useColorModeValue("blackAlpha.100", "whiteAlpha.100")}
+                    borderColor={cardBorder}
                   >
                     <CardHeader>
                       <Flex justifyContent="space-between">

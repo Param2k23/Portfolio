@@ -19,6 +19,8 @@ import ProjectsArray from "./ProjectsArray";
 
 export default function Projects({ color }) {
   const projects = ProjectsArray();
+  const projectBg = useColorModeValue("whiteAlpha.800", "rgba(30, 30, 50, 0.8)");
+  const projectBorder = useColorModeValue("blackAlpha.100", "whiteAlpha.100");
     
   return (
     <>
@@ -49,9 +51,9 @@ export default function Projects({ color }) {
               >
                 <Card
                   overflow="hidden"
-                  bg={useColorModeValue("whiteAlpha.800", "rgba(30, 30, 50, 0.8)")}
+                  bg={projectBg}
                   border="1px solid"
-                  borderColor={useColorModeValue("blackAlpha.100", "whiteAlpha.100")}
+                  borderColor={projectBorder}
                   h="100%"
                 >
                   <Image objectFit="cover" src={project.image} h="200px" />
