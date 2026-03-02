@@ -8,7 +8,6 @@ import {
   SimpleGrid,
   Badge,
   VStack,
-  useColorModeValue,
 } from "@chakra-ui/react";
 import ProfileArray from "./ProfileArray";
 
