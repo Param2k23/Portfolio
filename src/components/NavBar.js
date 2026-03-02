@@ -19,7 +19,6 @@ import {
 import { HamburgerIcon, SunIcon, MoonIcon } from "@chakra-ui/icons";
 import { useEffect, useState } from "react";
 import ProfileArray from "./ProfileArray";
-import { motion } from "framer-motion";
 const TbIcons = require("react-icons/tb");
 
 export default function Nav({ color }) {
