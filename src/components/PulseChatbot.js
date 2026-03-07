@@ -30,7 +30,7 @@ export default function PulseChatbot({ color }) {
   const [inputValue, setInputValue] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef(null);
-  
+
   const botMessageBg = useColorModeValue("gray.100", "rgba(30, 30, 50, 0.8)");
   const chatboxBg = useColorModeValue("white", "#0f0f1e");
   const textColor = useColorModeValue("gray.600", "gray.300");
@@ -58,7 +58,11 @@ export default function PulseChatbot({ color }) {
     setIsLoading(true);
 
     try {
-      const response = await fetch("http://localhost:5050/api/chat", {
+      const apiUrl = process.env.NODE_ENV === "production"
+        ? "/api/chat"
+        : "http://localhost:5050/api/chat";
+
+      const response = await fetch(apiUrl, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: inputValue }),
