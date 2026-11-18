@@ -84,7 +84,7 @@ export default function PulseChatbot({ color }) {
       console.error("Chat error:", error);
       const errorMessage = {
         id: (Date.now() + 1).toString(),
-        text: "Sorry, I couldn't connect to the backend. Make sure the server is running on port 5100.",
+        text: "Pulse is unavailable right now. You can reach Param using the email in the contact section.",
         sender: "bot",
         timestamp: new Date(),
       };
@@ -119,8 +119,8 @@ export default function PulseChatbot({ color }) {
             colorScheme={color}
             bg={`${color}.400`}
             rounded="full"
-            width="16"
-            height="16"
+            aria-label="Open portfolio assistant" width="12"
+            height="12"
             onClick={() => setIsOpen(true)}
             boxShadow="0 10px 30px rgba(0,0,0,0.2)"
             _hover={{ bg: `${color}.500` }}
@@ -137,7 +137,7 @@ export default function PulseChatbot({ color }) {
           bottom="24px"
           right="24px"
           width={{ base: "90vw", sm: "400px" }}
-          maxHeight="600px"
+          maxHeight="min(600px, 85dvh)"
           zIndex={9998}
           bg={chatboxBg}
           borderRadius="24px"
@@ -168,7 +168,7 @@ export default function PulseChatbot({ color }) {
               </Badge>
             </VStack>
             <IconButton
-              icon={<CloseIcon />}
+              aria-label="Close portfolio assistant" icon={<CloseIcon />}
               onClick={() => setIsOpen(false)}
               variant="ghost"
               color="white"
@@ -194,7 +194,7 @@ export default function PulseChatbot({ color }) {
               >
                 <Box
                   bg={msg.sender === "user" ? `${color}.400` : botMessageBg}
-                  color={msg.sender === "user" ? "white" : "gray.900"}
+                  color={msg.sender === "user" ? "white" : textColor}
                   borderRadius="16px"
                   px={4}
                   py={2}
@@ -222,7 +222,7 @@ export default function PulseChatbot({ color }) {
           {/* Input */}
           <HStack px={4} py={3} spacing={2}>
             <Input
-              placeholder="Ask me anything..."
+              aria-label="Ask Pulse a question" placeholder="Ask me anything..."
               value={inputValue}
               onChange={(e) => setInputValue(e.target.value)}
               onKeyPress={handleKeyPress}
